@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/index.css">
+<script src="/js/index.js"></script>
+{% endblock %}
+{% block content %}
+<div class="thumb" id="thumb"></div>
+<div class="num" id="num">0</div>
+{% endblock %}

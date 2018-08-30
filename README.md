@@ -8,12 +8,12 @@ npm i --save-dev path // node path模块
 
 npm i --save-dev systemjs // 支持export
 
-npm i --save-dev jqueryjs // DOM操作
+npm i --save-dev jquery // DOM操作
 
 npm i --save-dev koa // koa框架
 npm i --save-dev koa-simple-router // koa路由
 npm i --save-dev co  // koa2嫁接
-npm i --save-dev koa-swig // 页面渲染rander
+npm i --save-dev koa-swig // 页面渲染render
 npm i --save-dev koa-static // 静态资源加载
 ~~~
 ### 1.2 文件夹配置
