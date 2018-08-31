@@ -3,9 +3,35 @@
 {% block head %}
 {% parent %}
 <link rel="stylesheet" href="/css/index.css">
-<script src="/js/index.js"></script>
+<script src="/js/libs/jquery.js"></script>
+<script src="/js/libs/system.js"></script>
+<script src="/js/libs/axios.js"></script>
+<script src="/js/addNum.js"></script>
 {% endblock %}
 {% block content %}
 <div class="thumb" id="thumb"></div>
 <div class="num" id="num">0</div>
+<script>
+'use strict';
+
+SystemJS.config({
+  baseURL: '/js'
+});
+SystemJS.import('praisseButton.js').then(function (m) {
+  console.log(m)
+  // 挂载到jq上，形成jq组件
+  $.extend({
+    thumb: m.default
+  });
+  // 回调函数
+  callBack();
+});
+
+function callBack() {
+  var f = new $.thumb(0, $('#thumb'));
+  f.clickAction();
+}
+console.log(111);
+
+</script>
 {% endblock %}
