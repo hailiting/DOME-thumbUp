@@ -15,14 +15,13 @@ class PraisseButton {
                 setTimeout(function () {
                     $('#num').removeClass('numred')
                 }, 1000)
-                // axios.get('/index/update')
-                //     .then(res => {
-                //         console.log(res)
-                //         $('#num').html(this.num)
-                //     })
-                //     .catch((error) => {
-                //         console.log(error)
-                //     })
+                axios.get('/addNum')
+                    .then(res => {
+                        $('#num').html(this.num)
+                    })
+                    .catch((error) => {
+                    })
+                console.log(this.num)
             } else {
                 this.element.css('-webkit-filter', 'grayscale(0)');
                 this.num = 0

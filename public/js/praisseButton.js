@@ -28,26 +28,20 @@ var PraisseButton = function () {
             var _this = this;
 
             this.element.click(function () {
-                if (_this.num < 10) {
-                    _this.element.css('-webkit-filter', 'grayscale(0)');
-                    $('#num').addClass('numred');
-                    $('#num').html(_this.num + 1);
-                    _this.num = add(_this.num);
-                    setTimeout(function () {
-                        $('#num').removeClass('numred');
-                    }, 1000);
-                    // axios.get('/index/update')
-                    //     .then(res => {
-                    //         console.log(res)
-                    //         $('#num').html(this.num)
-                    //     })
-                    //     .catch((error) => {
-                    //         console.log(error)
-                    //     })
-                } else {
-                    _this.element.css('-webkit-filter', 'grayscale(0)');
-                    _this.num = 0;
-                }
+                _this.element.css('-webkit-filter', 'grayscale(0)');
+                $('#num').addClass('numred');
+                _this.num = add(_this.num);
+                $('#num').html(_this.num + 1);
+                setTimeout(function () {
+                    $('#num').removeClass('numred');
+                }, 1000);
+                axios.get('/addNum').then(function (res) {
+                    console.log(res);
+                    $('#num').html(_this.num);
+                }).catch(function (error) {
+                    console.log(error);
+                });
+                console.log(_this.num);
             });
         }
     }]);

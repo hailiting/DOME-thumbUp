@@ -38,7 +38,6 @@ var indexModel = function () {
           }
         });
       });
-      console.log(info);
     }
   }]);
 

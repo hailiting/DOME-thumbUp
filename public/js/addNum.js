@@ -1,3 +1,3 @@
-window.add = function(num){
-  num++
+window.add = function (num) {
+  return num + 1
 }

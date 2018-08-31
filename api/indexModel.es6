@@ -18,7 +18,6 @@ class indexModel {
         }
       })
     })
-    console.log(info);
   }
 }
 export default indexModel;

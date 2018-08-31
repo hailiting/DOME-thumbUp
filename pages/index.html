@@ -18,7 +18,6 @@ SystemJS.config({
   baseURL: '/js'
 });
 SystemJS.import('praisseButton.js').then(function (m) {
-  console.log(m)
   // 挂载到jq上，形成jq组件
   $.extend({
     thumb: m.default
@@ -31,7 +30,6 @@ function callBack() {
   var f = new $.thumb(0, $('#thumb'));
   f.clickAction();
 }
-console.log(111);
 
 </script>
 {% endblock %}
