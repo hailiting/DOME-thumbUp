@@ -31,7 +31,6 @@ var PraisseButton = function () {
                 if (_this.num < 10) {
                     _this.element.css('-webkit-filter', 'grayscale(0)');
                     $('#num').addClass('numred');
-                    alert(1);
                     $('#num').html(_this.num + 1);
                     _this.num = add(_this.num);
                     setTimeout(function () {

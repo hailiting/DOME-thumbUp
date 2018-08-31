@@ -14,6 +14,7 @@ var InitController = {
   init: function init(app, router) {
     app.use(router(function (_) {
       _.get('/index.html', _indexController2.default.index());
+      _.get('/addNum', _indexController2.default.addNum());
     }));
   }
 };
